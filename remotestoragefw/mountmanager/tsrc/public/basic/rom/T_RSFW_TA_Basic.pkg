@@ -1,0 +1,32 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: package file
+;
+;Languages
+&EN
+
+;Header
+#{"RemoteStorageFW cases"}, (0x0B1ABCED),0,2,0
+
+;Dependency for S60 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+;Localised Vendor name
+%{"Nokia/TP/ASP"}
+
+;Unique Vendor name
+:"Nokia/TP/ASP"
+
+;Files to install
+"\epoc32\release\armv5\urel\T_RSFW_TA_Basic.dll"-"!:\sys\bin\T_RSFW_TA_Basic.dll"

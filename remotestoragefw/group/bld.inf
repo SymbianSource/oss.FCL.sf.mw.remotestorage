@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2002-2004 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build info for RSFW
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_MMPFILES
+#include "../mountstore/group/bld.inf"
+#include "../rsfwnotifierplugins/group/bld.inf"
+#include "../remotefileengine/group/bld.inf" // rsfwcontrol.dll comes from here, and should be always included
+#include "../mountmanager/group/bld.inf"
+#include "../webdavaccessplugin/group/bld.inf"
+#include "../remotefilesystemplugin/group/bld.inf"
+#ifdef __REMOTE_STORAGE_FW
+#include "../gsplugin/group/bld.inf"
+#include "../remotedriveconfigurationbiocontrol/group/bld.inf"
+#endif
+
+PRJ_EXPORTS
+// .iby files (only for 5.0)
+../rom/rsfw.iby         CORE_MW_LAYER_IBY_EXPORT_PATH(rsfw.iby)
+../rom/rsfw_resources.iby           LANGUAGE_MW_LAYER_IBY_EXPORT_PATH(rsfw_resources.iby)
+
+// conf files
+../conf/remote_storage_fw.confml                        APP_LAYER_CONFML(remote_storage_fw.confml)
+../conf/remote_storage_fw_101F9775.crml                 APP_LAYER_CRML(remote_storage_fw_101F9775.crml)
+
+//  End of File  

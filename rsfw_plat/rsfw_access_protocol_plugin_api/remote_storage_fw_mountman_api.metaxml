@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="7a70cfbb928715aa4d102f59db155e58" dataversion="2.0">
+  <name>Remote Storage FW MountMan API</name>
+  <description>Provides control functions that can be used to mount and unmount remote storages, make queries about active mounts, their connection properties (server name etc.) and connection state (connected/disconnected). It can also be used to set the connection state of some active mount.</description>
+  <type>c++</type>
+  <collection>remotestoragefw</collection>
+  <libs>
+    <lib name="rsfwmountman.lib" />
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

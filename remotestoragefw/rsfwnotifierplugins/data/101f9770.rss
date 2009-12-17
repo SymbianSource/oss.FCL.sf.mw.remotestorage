@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource definitions for project notifier plugins
+*
+*/
+
+// INCLUDES
+
+#include "registryinfo.rh"
+#include "uikon.hrh"
+
+// RESOURCE DEFINITIONS
+
+RESOURCE REGISTRY_INFO theInfo
+{
+	dll_uid = 0x101F9770;
+	interfaces =
+	{
+	INTERFACE_INFO
+		{
+		interface_uid = KUikonUidPluginInterfaceNotifiers;
+		implementations =
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x101F9772;
+					version_no = 1;
+					display_name = "Rsfw Notifier Plugin";
+					default_data = "RsfwNotifierPlugin";
+					opaque_data = "0";
+					}
+				};
+		}
+	};
+}

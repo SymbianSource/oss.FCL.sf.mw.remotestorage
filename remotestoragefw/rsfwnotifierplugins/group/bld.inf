@@ -1,0 +1,28 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project notifier plugins
+*
+*/
+
+
+PRJ_EXPORTS
+../inc/rsfwauthenticationdlgrequest.h |../../inc/rsfwauthenticationdlgrequest.h
+../inc/rsfwsavetodlgrequest.h         |../../inc/rsfwsavetodlgrequest.h
+../inc/rsfwnotpluginrequest.h         |../../inc/rsfwnotpluginrequest.h
+../inc/rsfwnotpluginnamedialog.h      |../../inc/rsfwnotpluginnamedialog.h
+// export localised loc file
+../loc/rsfwnotplugindialog.loc        MW_LAYER_LOC_EXPORT_PATH(rsfwnotplugindialog.loc)
+
+PRJ_MMPFILES
+rsfwnotplugin.mmp

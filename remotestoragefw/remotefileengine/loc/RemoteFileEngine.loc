@@ -1,0 +1,102 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Localization strings for global notes in Remote File Engine
+*
+*/
+
+
+//  LOCALISATION STRINGS
+
+//d:Save file option
+//l:control_pane_t1/opt7
+//w:
+//r: 3.1
+//
+#define qtn_rd_softkey_save "Save"
+
+//d:Failed remote save error note
+//l:popup_note_window
+//w:
+//r:3.1
+//
+#define qtn_rd_query_file_save_fail "File %0U cannot be saved to %1U. File needs to be saved manually."
+
+//d:Wait note for file transfer
+//l:popup_note_wait_window
+//w:
+//r:3.1
+//
+#define qtn_rd_wait_transferring "Transferring..."
+
+//d:Wait note for connecting to a remote drive
+//l:popup_note_wait_window
+//w:
+//r:3.1
+//
+#define qtn_rd_wait_connecting  "Connecting..."
+
+//d:Retry option when connecting failed
+//l:control_pane_t1/opt7
+//w:
+//r:3.1
+//
+#define qtn_rd_softkey_retry  "Retry"
+
+//d:Remote drive unavailable error note
+//l:popup_note_window
+//w:
+//r:3.1
+//
+#define qtn_rd_conf_drive_unavailable "%U unavailable"
+
+//d:Remote drive address not found error note
+//l:popup_note_window
+//w:
+//r:3.1
+//
+#define qtn_rd_error_faulty_address "%U address not found. Check settings."
+
+//d:Warning dialog about open files when disconnecting
+//l:popup_note_window
+//w:
+//r:3.2
+//
+#define qtn_rd_conf_query_open_files_disconnect  "Files have been opened from this location. Changes made to the files are discarded if disconnecting before closing them. Continue?"
+
+//d:Information note 
+//l:popup_note_window
+//d:There has to be '\' character before '"' character.
+//d: This combination is shown as '"' character
+//w:
+//r:3.2
+#define qtn_rd_infonote_missing_prefix "Add prefix to drive address. For example \"https://\",\"http://\" or \"upnp://\"."
+
+//d:query
+//l:popup_note_window
+//w:
+//r:3.2
+#define qtn_rd_conf_query_send_auth_info "Send remote drive user name and password?" 
+
+//d:Information note 
+//l:popup_note_window
+//w:
+//r:3.2
+#define qtn_rd_err_no_network_cover  "Unable to connect. No network coverage."
+
+//dError note 
+//l:popup_note_window
+//w:
+//r:3.2
+#define qtn_rd_all_serv_failed "Saving failed."
+

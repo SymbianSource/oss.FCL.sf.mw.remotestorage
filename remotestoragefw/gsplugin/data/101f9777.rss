@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*        ECOM plugin resource file for RSFW GS plugin.
+*
+*
+*/
+
+#include <registryinfo.rh>
+
+
+RESOURCE REGISTRY_INFO theInfo
+	{
+	dll_uid     = 0x101F9777; 
+	interfaces  = 
+		{
+		INTERFACE_INFO
+			{
+			interface_uid   = 0x10207236; // UID for CGSPluginInterface - do not change.
+			implementations = 
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid  = 0x101F9778; 
+					version_no          = 1;
+					display_name        = "RSFW GS plugin"; 
+					default_data        = "0x10207250"; // Parent UID connection settings
+					opaque_data         = "90"; // Order number
+					}
+				};
+			}
+		};
+	}
+

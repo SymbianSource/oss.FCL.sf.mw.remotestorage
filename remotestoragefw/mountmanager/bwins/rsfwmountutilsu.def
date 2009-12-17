@@ -1,0 +1,7 @@
+EXPORTS
+	?ExportMountEntryL@RsfwMountUtils@@SAXABVCRsfwMountEntry@@HAAVTDes16@@@Z @ 1 NONAME ; void RsfwMountUtils::ExportMountEntryL(class CRsfwMountEntry const &, int, class TDes16 &)
+	?ImportMountEntryFromStreamL@RsfwMountUtils@@SAXAAVRReadStream@@HPAPAVCRsfwMountEntry@@@Z @ 2 NONAME ; void RsfwMountUtils::ImportMountEntryFromStreamL(class RReadStream &, int, class CRsfwMountEntry * *)
+	?ImportMountEntryL@RsfwMountUtils@@SAXABVTDesC16@@PAPAVCRsfwMountEntry@@@Z @ 3 NONAME ; void RsfwMountUtils::ImportMountEntryL(class TDesC16 const &, class CRsfwMountEntry * *)
+	?IsDriveAddressValid@RsfwMountUtils@@SAHABVTDesC8@@@Z @ 4 NONAME ; int RsfwMountUtils::IsDriveAddressValid(class TDesC8 const &)
+	?IsFriendlyNameValid@RsfwMountUtils@@SAHABVTDesC16@@@Z @ 5 NONAME ; int RsfwMountUtils::IsFriendlyNameValid(class TDesC16 const &)
+

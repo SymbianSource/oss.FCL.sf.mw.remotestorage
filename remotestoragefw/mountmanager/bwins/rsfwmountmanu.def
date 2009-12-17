@@ -1,0 +1,30 @@
+EXPORTS
+	??1CRsfwMountMan@@UAE@XZ @ 1 NONAME ; CRsfwMountMan::~CRsfwMountMan(void)
+	?AddMountEntryL@CRsfwMountMan@@QAEXPAVCRsfwMountEntry@@@Z @ 2 NONAME ; void CRsfwMountMan::AddMountEntryL(class CRsfwMountEntry *)
+	?DeleteMountEntryL@CRsfwMountMan@@QAEXABVTDesC16@@@Z @ 3 NONAME ; void CRsfwMountMan::DeleteMountEntryL(class TDesC16 const &)
+	?DeleteMountEntryL@CRsfwMountMan@@QAEXVTChar@@@Z @ 4 NONAME ; void CRsfwMountMan::DeleteMountEntryL(class TChar)
+	?EditMountEntryL@CRsfwMountMan@@QAEXPAVCRsfwMountEntry@@@Z @ 5 NONAME ; void CRsfwMountMan::EditMountEntryL(class CRsfwMountEntry *)
+	?GetAllDrivesL@CRsfwMountMan@@QBEHAAV?$TBuf8@$0BK@@@@Z @ 6 NONAME ; int CRsfwMountMan::GetAllDrivesL(class TBuf8<26> &) const
+	?GetMountInfo@CRsfwMountMan@@QBEHVTChar@@AAVTRsfwMountInfo@@@Z @ 7 NONAME ; int CRsfwMountMan::GetMountInfo(class TChar, class TRsfwMountInfo &) const
+	?GetMountNamesL@CRsfwMountMan@@QBEXPAVCDesC16Array@@@Z @ 8 NONAME ; void CRsfwMountMan::GetMountNamesL(class CDesC16Array *) const
+	?GetRemoteMountListL@CRsfwMountMan@@QBEHAAV?$TBuf8@$0BK@@@@Z @ 9 NONAME ; int CRsfwMountMan::GetRemoteMountListL(class TBuf8<26> &) const
+	?IsAppOnBlackList@CRsfwMountMan@@QBEHVTUid@@@Z @ 10 NONAME ; int CRsfwMountMan::IsAppOnBlackList(class TUid) const
+	?MountEntryL@CRsfwMountMan@@QBEPBVCRsfwMountEntry@@ABVTDesC16@@@Z @ 11 NONAME ; class CRsfwMountEntry const * CRsfwMountMan::MountEntryL(class TDesC16 const &) const
+	?MountEntryL@CRsfwMountMan@@QBEPBVCRsfwMountEntry@@VTChar@@@Z @ 12 NONAME ; class CRsfwMountEntry const * CRsfwMountMan::MountEntryL(class TChar) const
+	?NewL@CRsfwMountMan@@SAPAV1@IPAVMRsfwMountManObserver@@@Z @ 13 NONAME ; class CRsfwMountMan * CRsfwMountMan::NewL(unsigned int, class MRsfwMountManObserver *)
+	?RefreshDirectory@CRsfwMountMan@@QAEHABVTDesC16@@@Z @ 14 NONAME ; int CRsfwMountMan::RefreshDirectory(class TDesC16 const &)
+	?SetMountConnectionState@CRsfwMountMan@@QAEHVTChar@@I@Z @ 15 NONAME ; int CRsfwMountMan::SetMountConnectionState(class TChar, unsigned int)
+	?CancelRemoteTransfer@CRsfwMountMan@@QAEHABVTDesC16@@@Z @ 16 NONAME ; int CRsfwMountMan::CancelRemoteTransfer(class TDesC16 const &)
+	?ExternalizeL@TRsfwMountConfig@@QBEXAAVRWriteStream@@@Z @ 17 NONAME ; void TRsfwMountConfig::ExternalizeL(class RWriteStream &) const
+	?InternalizeL@TRsfwMountConfig@@QAEXAAVRReadStream@@@Z @ 18 NONAME ; void TRsfwMountConfig::InternalizeL(class RReadStream &)
+	??1CRsfwMountEntry@@UAE@XZ @ 19 NONAME ; CRsfwMountEntry::~CRsfwMountEntry(void)
+	?Clear@CRsfwMountEntry@@QAEXXZ @ 20 NONAME ; void CRsfwMountEntry::Clear(void)
+	?CloneL@CRsfwMountEntry@@QBEPAV1@XZ @ 21 NONAME ; class CRsfwMountEntry * CRsfwMountEntry::CloneL(void) const
+	?Item@CRsfwMountEntry@@QBEPBVHBufC16@@H@Z @ 22 NONAME ; class HBufC16 const * CRsfwMountEntry::Item(int) const
+	?NewL@CRsfwMountEntry@@SAPAV1@XZ @ 23 NONAME ; class CRsfwMountEntry * CRsfwMountEntry::NewL(void)
+	?NewLC@CRsfwMountEntry@@SAPAV1@XZ @ 24 NONAME ; class CRsfwMountEntry * CRsfwMountEntry::NewLC(void)
+	?SetEntryL@CRsfwMountEntry@@QAEXHABVTDesC16@@VTChar@@0000@Z @ 25 NONAME ; void CRsfwMountEntry::SetEntryL(int, class TDesC16 const &, class TChar, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &)
+	?SetItemL@CRsfwMountEntry@@QAEXHABVTDesC16@@@Z @ 26 NONAME ; void CRsfwMountEntry::SetItemL(int, class TDesC16 const &)
+	?SetItemL@CRsfwMountEntry@@QAEXHABVTDesC8@@@Z @ 27 NONAME ; void CRsfwMountEntry::SetItemL(int, class TDesC8 const &)
+	?SetMountConnectionStateBlind@CRsfwMountMan@@QAEHVTChar@@I@Z @ 28 NONAME ; int CRsfwMountMan::SetMountConnectionStateBlind(class TChar, unsigned int)
+

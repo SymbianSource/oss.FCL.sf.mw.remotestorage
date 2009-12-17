@@ -1,0 +1,192 @@
+/*
+* Copyright (c) 2005-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Localization strings for RsfwGSPlugin
+*
+*/
+
+
+//  LOCALISATION STRINGS
+
+//d:error note; not able to add a new drive
+//l:popup_note_window
+//w:
+//r:3.1
+//
+#define qtn_rd_error_max_drives "Maximum number of remote drives configured. Remove old configurations to create new."
+
+//d:error note; not able to edit settings for a connected drive
+//l:popup_note_window
+//w:
+//r:3.1
+//
+#define qtn_rd_error_edit_connected  "%U connected. Drive configuration cannot be changed during active connection."
+
+//d:error note; new configuration is incomplete
+//l:popup_note_window
+//w:
+//r:3.1
+//
+#define qtn_rd_query_incomplete  "Remote drive configuration incomplete. Delete configuration?"
+
+//d:error note; drive name already exists
+//l:popup_note_window
+//w:
+//r:3.1
+//
+#define qtn_rd_error_existing_name  "Drive name %U already exists. Please enter unique drive name."
+
+//d:Default name for a new remote drive
+//l:list_set_graphic_pane_t1
+//w:
+//r:3.1
+//
+#define qtn_rd_default_drive_name  "New drive"
+
+//d:Password setting for a remote drive
+//l:list_setting_pane_t1
+//w:
+//r:3.1
+//
+#define qtn_rd_setting_pw  "Password"
+
+//d:User name setting for a remote drive
+//l:list_setting_pane_t1
+//w:
+//r:3.1
+//
+#define qtn_rd_setting_user  "User name"
+
+//d:Access point setting for a remote drive
+//l:list_setting_pane_t1
+//w:
+//r:3.1
+//
+#define qtn_rd_setting_ap	 "Access point"
+
+//d:Address setting for a remote drive
+//l:list_setting_pane_t1
+//w:
+//r:3.1
+//
+#define qtn_rd_setting_url  "Address"
+
+//d:Drive name setting for a remote drive
+//l:list_setting_pane_t1
+//w:
+//r:3.1
+//
+#define qtn_rd_setting_drive_name  "Drive name"
+
+//d:Default title for settings for a new remote drive
+//l:title_pane_t2/opt9
+//w:
+//r:3.1
+//
+#define qtn_rd_title_new_drive "New drive"
+
+//d:Text in confirmation query when deleting a drive
+//l:popup_note_window
+//w:
+//r:3.1
+//
+#define qtn_rd_query_delete_drive "Delete configuration for %U?"
+
+//d:Options list text for deleting a remote drive
+//l:list_single_pane_t1_cp2
+//w:
+//r:3.1
+//
+#define qtn_rd_opt_delete "Delete"
+
+//d:Options list text for new remote drive
+//l:list_single_pane_t1_cp2
+//w:
+//r:3.1
+//
+#define qtn_rd_opt_new_drive "New remote drive"
+
+//d:Options list text for editing a remote drive
+//l:list_single_pane_t1_cp2
+//w:
+//r:3.1
+//
+#define qtn_rd_opt_edit  "Edit"
+
+//d:Options list text for connecting a remote drive
+//l:list_single_pane_t1_cp2
+//w:
+//r:3.1
+//
+#define qtn_rd_opt_connect  "Connect"
+
+//d:Options list text for disconnecting a remote drive
+//l:list_single_pane_t1_cp2
+//w:
+//r:3.1
+//
+#define qtn_rd_opt_disconnect  "Disconnect"
+
+//d:Options list text for sending a remote drive configuration
+//l:list_single_pane_t1_cp2
+//w:
+//r:3.1
+//
+#define qtn_rd_opt_send_link  "Send link"
+
+//d:Text for empty listbox item
+//l:main_pane_empty_t1/opt2
+//w:
+//r:3.1
+//
+#define qtn_rd_empty_list_primary  "(no remote drives)"
+
+//d:Secondary text for empty listbox item
+//l:main_list_empty_pane/opt2
+//w:
+//r:3.1
+//
+#define qtn_rd_empty_list_secondary  "Select New remote drive from options menu"
+
+//d:Text in title pane
+//l:title_pane_t2/opt9
+//w:
+//r:3.1
+//
+#define qtn_rd_title_drives  "Remote drives"
+
+//d:Title showed by Control Panel application for this plugin
+//l:list_double_large_graphic_pane_t1
+//w:
+//r:5.0
+//
+#define qtn_set_folder_conn_remote_drives  "Remote drives"
+
+//d:Default value for access point name
+//l:list_set_graphic_pane_t1
+//w:
+//r:3.1
+//
+#define qtn_rd_default_access_point  "Always ask"
+
+//d:Information note 
+//l:popup_note_window
+//d:There has to be '\' character before '"' character.
+//d: This combination is shown as '"' character
+//w:
+//r:3.2
+#define qtn_rd_infonote_missing_http_prefix  "Add a supported prefix to drive address. For example \"https://\" or \"http://\"."
+
+// End of File
+
+
