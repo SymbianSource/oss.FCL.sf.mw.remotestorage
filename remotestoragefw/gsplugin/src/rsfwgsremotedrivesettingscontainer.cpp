@@ -200,7 +200,7 @@ void CRsfwGsPluginDriveSettingsContainer::HandleListBoxEventL(CEikListBox* /*aLi
     {
     // if the Select Key has been pressed
     if ((aListBoxEvent == MEikListBoxObserver::EEventEnterKeyPressed) ||
-    (aListBoxEvent == MEikListBoxObserver::EEventItemClicked))
+    (aListBoxEvent == MEikListBoxObserver::EEventItemSingleClicked))
         {
         iSettingList->EditCurrentItemL();
         }

@@ -212,11 +212,13 @@ RESOURCE MENU_PANE r_gs_remote_drives_menu
             {
             command = EGSCmdAppChange;
             txt = qtn_options_change; 
+            flags = EEikMenuItemAction;
             },
         MENU_ITEM 
             {
             command = EGSCmdAppEdit;
-            txt = qtn_rd_opt_edit; 
+            txt = qtn_rd_opt_edit;
+            flags = EEikMenuItemSpecific;
             },
         MENU_ITEM
             {
@@ -227,21 +229,25 @@ RESOURCE MENU_PANE r_gs_remote_drives_menu
             {
             command = EGSCmdAppConnect;
             txt = qtn_rd_opt_connect;
+            flags = EEikMenuItemSpecific;
             },
         MENU_ITEM
             {
             command = EGSCmdAppDisconnect;
             txt = qtn_rd_opt_disconnect;
+            flags = EEikMenuItemSpecific;
             },
         MENU_ITEM
             {
             command = EGSCmdAppSendLink;
             txt = qtn_rd_opt_send_link;
+            flags = EEikMenuItemSpecific;
             },            
         MENU_ITEM
             {
             command = EGSCmdAppDelete;
             txt = qtn_rd_opt_delete;
+            flags = EEikMenuItemSpecific;
             }       
         };
     }
