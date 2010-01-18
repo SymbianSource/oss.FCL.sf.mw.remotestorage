@@ -118,6 +118,7 @@ void CRsfwGsPluginSettingsList::EditItemL (TInt aIndex, TBool aCalledFromMenu)
        	 	}
     	else
        		{
+            //coverity[logical_vs_bitwise]
         	cflags &= (!CAknTextSettingPage::EZeroLengthAllowed);
         	}
         (*SettingItemArray())[aIndex]->SetSettingPageFlags(cflags);	

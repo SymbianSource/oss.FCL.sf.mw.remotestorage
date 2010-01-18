@@ -197,7 +197,7 @@ void CRsfwLruPriorityList::InternalizeL(RReadStream& aStream, CRsfwVolumeTable* 
         fid.iVolumeId = aStream.ReadInt32L();
 
         // check whether there is no trash in the data being internalized
-        if (fid.iVolumeId >= 0 && fid.iVolumeId <= KMaxVolumes && fid.iNodeId > 0)
+        if (fid.iVolumeId >= 0 && fid.iVolumeId < KMaxVolumes && fid.iNodeId > 0)
             {
             // find existing CRsfwFileEntry object based on TFid
             CRsfwVolume* volume = aVolumeTable->iVolumes[fid.iVolumeId];
