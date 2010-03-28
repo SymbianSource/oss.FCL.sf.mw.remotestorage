@@ -81,8 +81,8 @@ public: // Constructors and destructor
      * Two-phased constructor.
      */
     static CRsfwDavSession*
-    CRsfwDavSession::NewL(MRsfwDavResponseObserver* aWebDavResponseObserver,
-                         MRsfwConnectionObserver* aRsfwConnectionObserver);
+    NewL(MRsfwDavResponseObserver* aWebDavResponseObserver,
+         MRsfwConnectionObserver* aRsfwConnectionObserver);
     /**
      * Destructor.
      */
