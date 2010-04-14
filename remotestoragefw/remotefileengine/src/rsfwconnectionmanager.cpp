@@ -279,7 +279,15 @@ TInt CRsfwConnectionManager::StartConnection(TUint32 aIapId,
     else
         {
         DEBUGSTRING(("StartConnection called twice!"));
-        err = KErrGeneral;
+        Cancel();
+                
+        DEBUGSTRING(("StartConnection Cancel!"));
+
+        iConnection.ProgressNotification(iProgress, iStatus);
+        DEBUGSTRING(("CRsfwConnectionManager iConnection.ProgressNotification!"));
+
+        SetActive();
+       
         }
     return err;
     }

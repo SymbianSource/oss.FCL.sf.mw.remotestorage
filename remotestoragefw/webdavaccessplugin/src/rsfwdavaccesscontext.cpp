@@ -193,8 +193,8 @@ void CRsfwDavAccessContextOptions::TransactionError(TInt aError)
     {
     DEBUGSTRING(("DAV: OptionsL raw err=%d", aError));
     if ((aError == KErrCommsLineFail) ||
-        (aError == KErrNotReady) ||
-        (aError == KErrDisconnected))
+        (aError == KErrNotReady) )
+//        (aError == KErrDisconnected))
         {
         iTryCount--;
         }

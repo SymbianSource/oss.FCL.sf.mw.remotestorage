@@ -396,7 +396,7 @@ TInt CRsfwMountManImpl::GetMountInfo(TChar aDriveLetter,
 TInt CRsfwMountManImpl::GetRsfwControlConnection()
     {
     TInt err = KErrNone;
-    if (!iRsfwControlConnected)
+//    if (!iRsfwControlConnected)
         {
         err = iRsfwControl.Connect();
         if (!err) 

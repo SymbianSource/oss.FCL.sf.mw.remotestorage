@@ -268,6 +268,7 @@ EXPORT_C TBool RsfwMountUtils::IsDriveAddressValid(const TDesC8& aDriveAddress)
         // if fetching the list of implemenations fail,'
         // (for example a temporary out of memory situation)
         // just accept the string
+		implinfo.ResetAndDestroy();
         return ETrue;
         }
      
@@ -279,12 +280,14 @@ EXPORT_C TBool RsfwMountUtils::IsDriveAddressValid(const TDesC8& aDriveAddress)
     _LIT8(KDelimiter, "://");
     if (aDriveAddress.Length() < protocol.Length()+3) 
         {
+		implinfo.ResetAndDestroy();
         return EFalse;
         }
     
     TPtrC8 test = aDriveAddress.Mid(protocol.Length(), 3);
     if (!(test.Compare(KDelimiter) == 0)) 
         {
+		implinfo.ResetAndDestroy();
         return EFalse;    
         }
     
