@@ -1,7 +1,0 @@
-EXPORTS
-	_ZN14RsfwMountUtils17ExportMountEntryLERK15CRsfwMountEntryiR6TDes16 @ 1 NONAME
-	_ZN14RsfwMountUtils17ImportMountEntryLERK7TDesC16PP15CRsfwMountEntry @ 2 NONAME
-	_ZN14RsfwMountUtils19IsDriveAddressValidERK6TDesC8 @ 3 NONAME
-	_ZN14RsfwMountUtils19IsFriendlyNameValidERK7TDesC16 @ 4 NONAME
-	_ZN14RsfwMountUtils27ImportMountEntryFromStreamLER11RReadStreamiPP15CRsfwMountEntry @ 5 NONAME
-
