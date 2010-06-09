@@ -49,6 +49,8 @@ START WINS
 BASEADDRESS	0x63000000
 END
 
+unpagedcode
+
 DEFFILE   eremotefs.def
 
 // End of File
