@@ -1,0 +1,68 @@
+/*
+* Copyright (c) 2002-2004 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  IBY file for Remote Storage FW
+*
+*/
+
+
+#ifndef RSFW_IBY
+#define RSFW_IBY
+
+// DLLs used by RSFW MountMan API, always included
+file=ABI_DIR\BUILD_DIR\rsfwcontrol.dll           SHARED_LIB_DIR\rsfwcontrol.dll
+file=ABI_DIR\BUILD_DIR\rsfwmountman.dll          SHARED_LIB_DIR\rsfwmountman.dll 
+file=ABI_DIR\BUILD_DIR\rsfwmountstore.dll        SHARED_LIB_DIR\rsfwmountstore.dll 
+file=ABI_DIR\BUILD_DIR\rsfwmountutils.dll             SHARED_LIB_DIR\rsfwmountutils.dll 
+
+#ifdef __REMOTE_STORAGE_FW
+
+// Common objects
+file=ABI_DIR\BUILD_DIR\rsfwcommon.dll            SHARED_LIB_DIR\rsfwcommon.dll
+
+// Remote File System plug-in
+file=ABI_DIR\BUILD_DIR\eremotefs.fsy             SHARED_LIB_DIR\eremotefs.fsy
+
+// Remote File Engine
+file=ABI_DIR\BUILD_DIR\remotefe.exe              PROGRAMS_DIR\remotefe.exe
+
+// RSFW Boot Mounter
+file=ABI_DIR\BUILD_DIR\rsfwbootmounter.exe              PROGRAMS_DIR\rsfwbootmounter.exe
+
+// Access Modules (ECom plug-ins)
+ECOM_PLUGIN(rsfwdavaccess.dll, 101F9769.rsc) 
+
+// Remote File Engine client-side DLLs
+file=ABI_DIR\BUILD_DIR\rsfwsession.dll           SHARED_LIB_DIR\rsfwsession.dll
+
+// RSFW config
+file=ABI_DIR\BUILD_DIR\rsfwconfig.dll            SHARED_LIB_DIR\rsfwconfig.dll
+
+// RSFW General Settings Plugin UI
+ECOM_PLUGIN(rsfwgsplugin.dll,101f9777.rsc) // this publishes the DLL and the 
+            // resource file to the correct location
+data=DATAZ_\BITMAP_DIR\rsfwgsplugin.mif BITMAP_DIR\rsfwgsplugin.mif       
+
+// extended notifier server plugin (global dialogs)
+//NotifierPlugin
+ECOM_PLUGIN(rsfwnotplugin.dll, 101F9770.rss) 
+
+// Bio Control
+// dll location
+file=ABI_DIR\BUILD_DIR\rsfwmountconfbc.dll       		SHARED_LIB_DIR\rsfwmountconfbc.dll
+
+#endif // __REMOTE_STORAGE_FW
+
+#endif // RSFW_IBY
+
+//  End of File  

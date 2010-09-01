@@ -1,0 +1,13 @@
+EXPORTS
+	CreateFileSystem @ 1 NONAME
+	_ZTI12CRsfwFsDirCB @ 2 NONAME DATA 12 ; #<TI>#
+	_ZTI13CRsfwFsFileCB @ 3 NONAME DATA 12 ; #<TI>#
+	_ZTI14CRsfwFsMountCB @ 4 NONAME DATA 12 ; #<TI>#
+	_ZTI15CRsfwFileSystem @ 5 NONAME DATA 12 ; #<TI>#
+	_ZTI15CRsfwFsFormatCB @ 6 NONAME DATA 12 ; #<TI>#
+	_ZTV12CRsfwFsDirCB @ 7 NONAME DATA 44 ; #<VT>#
+	_ZTV13CRsfwFsFileCB @ 8 NONAME DATA 68 ; #<VT>#
+	_ZTV14CRsfwFsMountCB @ 9 NONAME DATA 152 ; #<VT>#
+	_ZTV15CRsfwFileSystem @ 10 NONAME DATA 76 ; #<VT>#
+	_ZTV15CRsfwFsFormatCB @ 11 NONAME DATA 40 ; #<VT>#
+

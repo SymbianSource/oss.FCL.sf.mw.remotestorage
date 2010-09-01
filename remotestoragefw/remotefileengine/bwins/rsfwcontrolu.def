@@ -1,0 +1,15 @@
+EXPORTS
+	??0RRsfwControl@@QAE@XZ @ 1 NONAME ; RRsfwControl::RRsfwControl(void)
+	?CancelRemoteTransfer@RRsfwControl@@QAEHABVTDesC16@@@Z @ 2 NONAME ; int RRsfwControl::CancelRemoteTransfer(class TDesC16 const &)
+	?Connect@RRsfwControl@@QAEHXZ @ 3 NONAME ; int RRsfwControl::Connect(void)
+	?DismountByDriveLetter@RRsfwControl@@QAEHVTChar@@@Z @ 4 NONAME ; int RRsfwControl::DismountByDriveLetter(class TChar)
+	?DismountByVolumeId@RRsfwControl@@QAEHH@Z @ 5 NONAME ; int RRsfwControl::DismountByVolumeId(int)
+	?GetMountInfo@RRsfwControl@@QAEHABVTChar@@AAVTRsfwMountInfo@@@Z @ 6 NONAME ; int RRsfwControl::GetMountInfo(class TChar const &, class TRsfwMountInfo &)
+	?Mount@RRsfwControl@@QAEHH@Z @ 7 NONAME ; int RRsfwControl::Mount(int)
+	?Mount@RRsfwControl@@QAEXABVTRsfwMountConfig@@AAVTRequestStatus@@@Z @ 8 NONAME ; void RRsfwControl::Mount(class TRsfwMountConfig const &, class TRequestStatus &)
+	?RefreshDirectory@RRsfwControl@@QAEHABVTDesC16@@@Z @ 9 NONAME ; int RRsfwControl::RefreshDirectory(class TDesC16 const &)
+	?SetMountConnectionState@RRsfwControl@@QAEHABVTChar@@I@Z @ 10 NONAME ; int RRsfwControl::SetMountConnectionState(class TChar const &, unsigned int)
+	?Version@RRsfwControl@@QAE?AVTVersion@@XZ @ 11 NONAME ; class TVersion RRsfwControl::Version(void)
+	?MountBlind@RRsfwControl@@QAEHH@Z @ 12 NONAME ; int RRsfwControl::MountBlind(int)
+	?Mount@RRsfwControl@@QAEHABVTRsfwMountConfig@@@Z @ 13 NONAME ; int RRsfwControl::Mount(class TRsfwMountConfig const &)
+

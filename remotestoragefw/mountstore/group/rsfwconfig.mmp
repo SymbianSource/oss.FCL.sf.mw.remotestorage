@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project RSFW Config
+*
+*/
+
+#include <platform_paths.hrh>
+TARGET		rsfwconfig.dll
+
+TARGETTYPE	dll
+
+CAPABILITY	ALL -TCB
+
+UID		0x1000008d 0x101F976D
+
+SOURCEPATH	../src
+
+SOURCE		rsfwconfig.cpp
+
+LANG		SC
+
+MW_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   ../../../inc
+SYSTEMINCLUDE   ../../inc
+USERINCLUDE     ../inc
+
+LIBRARY		centralrepository.lib
+LIBRARY		euser.lib
+
+DEFFILE   rsfwconfig.def

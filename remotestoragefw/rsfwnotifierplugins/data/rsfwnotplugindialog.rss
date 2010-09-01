@@ -1,0 +1,370 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource definitions for project notifier plugins
+*
+*/
+
+
+// RESOURCE IDENTIFIER
+NAME RSFN
+
+// INCLUDES
+#include 	<badef.rh>
+#include <eikon.rh>
+#include <eikon.rsg>
+#include <avkon.rsg>
+#include <avkon.hrh>
+#include <avkon.rh>
+#include <avkon.mbg>
+#include <avkon.loc>
+
+#include "avkon.loc"
+#include <rsfwnotplugindialog.loc>
+// some strings moved from rfe to here
+#include <remotefileengine.loc>
+
+// RESOURCE DEFINITIONS
+// ---------------------------------------------------------
+//   
+//    Define the resource file signature 
+//    This resource should be empty.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE 
+    { 
+    }
+    
+// ---------------------------------------------------------
+//   
+//    Default Document Name
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF 
+    { 
+    buf=""; 
+    }
+
+RESOURCE CBA r_custom_softkeys_retry_cancel
+    {
+    flags = EAknCBAFlagRespondWhenInvisible;
+
+    buttons =
+        {
+        CBA_BUTTON 
+            {
+            id = EAknSoftkeyOk; 
+            txt = qtn_rd_softkey_retry;
+            },
+        CBA_BUTTON 
+            {
+            id = EAknSoftkeyCancel; 
+            txt = text_softkey_cancel;
+            },
+         CBA_BUTTON
+            {
+            id = EAknSoftkeyOk;
+            txt = qgn_prop_msk_select;
+            } 
+        };
+    }   
+    
+RESOURCE CBA r_custom_softkeys_save_no
+    {
+    flags = EAknCBAFlagRespondWhenInvisible;
+
+    buttons =
+        {
+        CBA_BUTTON 
+            {
+            id = EAknSoftkeySave; 
+            txt = qtn_rd_softkey_save;
+            },
+        CBA_BUTTON 
+            {
+            id = EAknSoftkeyNo; 
+            txt = text_softkey_no;
+            },
+        CBA_BUTTON
+            {
+            id = EAknSoftkeySave;
+            txt = qgn_prop_msk_select;
+            }     
+        };
+    }       
+   
+    
+//----------------------------------------------------
+// r_custom_retry_query
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_custom_retry_query
+{
+    flags = EGeneralQueryFlags;
+    buttons = r_custom_softkeys_retry_cancel; 
+    items = 
+    {
+        DLG_LINE
+        {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+            {
+                layout = EConfirmationQueryLayout;
+                bmpfile   = AVKON_BITMAP_FILE;
+                bmpid     = EMbmAvkonQgn_note_warning;
+                bmpmask   = EMbmAvkonQgn_note_warning_mask;
+            };
+        }
+    };
+}
+
+RESOURCE DIALOG r_transfer_wait_note
+    {
+    flags = EAknWaitNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralNote; 
+            control= AVKON_NOTE 
+                { 
+                layout = EWaitLayout;
+                singular_label = qtn_rd_wait_transferring;
+                animation =R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+
+
+RESOURCE DIALOG r_connecting_wait_note
+    {
+    flags = EAknWaitNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralNote; 
+            control= AVKON_NOTE 
+                { 
+                layout = EWaitLayout;
+                singular_label = qtn_rd_wait_connecting;
+                animation =R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+
+
+RESOURCE DIALOG r_fetching_wait_note
+    {
+    flags = EAknWaitNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralNote; 
+            control= AVKON_NOTE 
+                { 
+                layout = EWaitLayout;
+                singular_label = qtn_gen_note_fetching;
+                animation =R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_rsfw_not_plugin_file_name_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_DATA_QUERY
+                {
+                layout = EDataLayout;
+                label = qtn_fldr_item_name_prmpt;
+                control = EDWIN
+                    {
+                    flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                    lines = 1;
+                    maxlength = 256;
+                    };
+                };
+            }
+        };
+    }
+
+//----------------------------------------------------
+// r_custom_save_query
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_custom_save_query
+{
+    flags = EGeneralQueryFlags;
+    buttons = r_custom_softkeys_save_no; 
+    items = 
+    {
+        DLG_LINE
+        {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+            {
+                layout = EConfirmationQueryLayout;
+                bmpfile   = AVKON_BITMAP_FILE;
+                bmpid     = EMbmAvkonQgn_note_warning;
+                bmpmask   = EMbmAvkonQgn_note_warning_mask;
+            };
+        }
+    };
+}
+
+//----------------------------------------------------
+// r_rsfw_plugin_rename_query
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_rsfw_plugin_rename_query
+{
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items = 
+    {
+        DLG_LINE
+        {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+            {
+                layout = EConfirmationQueryLayout;
+            };
+        }
+    };
+}
+
+RESOURCE DIALOG r_rsfw_plugin_overwrite_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_YES_NO;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationQueryLayout;
+                label = qtn_fldr_overwrite_query;
+                };
+            }
+        };
+    }
+
+
+//----------------------------------------------------
+//    r_custom_usernamepasswd_dialog
+//
+// This is used to show user custom authentication 
+// dialog. 
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_custom_usernamepasswd_dialog
+{
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL;
+    items = {
+        DLG_LINE {
+            type = EAknCtMultilineQuery;
+            id = EMultilineFirstLine;
+            control = AVERELL_DATA_QUERY {
+                layout = EMultiDataFirstEdwin;
+                control = EDWIN {
+                		default_case = EAknEditorLowerCase;
+                    flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable | EAknEditorLowerCase;
+                    width = 25;
+                    maxlength = 50;//KRsfwMaxUsernameLength
+                    avkon_flags = EAknEditorFlagLatinInputModesOnly;
+                   	allowed_input_modes = EAknEditorTextInputMode | EAknEditorNumericInputMode;
+    								default_input_mode = EAknEditorTextInputMode;
+                };
+            };
+        },
+        DLG_LINE {
+            type = EAknCtMultilineQuery;
+            id = EMultilineSecondLine;
+            control = AVERELL_DATA_QUERY {
+                layout = EMultiDataSecondSecEd;
+                control = SECRETED {
+                    num_letters = 50;//KRsfwMaxUsernameLength
+                };
+            };
+        }
+    };
+}
+
+// ---------------------------------------------------
+//
+//    r_rswfplugin_not_enough_memory
+//
+// ---------------------------------------------------
+//
+RESOURCE TBUF r_rsfwplugin_not_enough_memory
+    {
+    buf = qtn_memlo_not_enough_memory;
+    }
+
+
+// ---------------------------------------------------
+//
+//    r_rswfplugin_mmc_not_enough_memory
+//
+// ---------------------------------------------------
+//
+RESOURCE TBUF r_rsfwplugin_mmc_not_enough_memory
+    {
+    buf = qtn_memlo_mmc_not_enough_memory;
+    }
+
+RESOURCE TBUF r_rd_query_username { buf = qtn_rd_query_username; }
+RESOURCE TBUF r_rd_query_password { buf = qtn_rd_query_password; }
+RESOURCE TBUF r_rd_drive_unavailable { buf = qtn_rd_conf_drive_unavailable; }
+RESOURCE TBUF r_rd_file_save_fail { buf = qtn_rd_query_file_save_fail; }
+RESOURCE TBUF r_rd_select_dir_back { buf = text_softkey_back; }
+RESOURCE TBUF r_rd_item_rename_query  { buf = qtn_fldr_rename_query; }
+RESOURCE TBUF r_rd_name_in_use_rename { buf = qtn_fldr_item_name_prmp; }
+RESOURCE TBUF r_rd_fldr_illegal_characters { buf = qtn_fldr_illegal_characters; } 
+RESOURCE TBUF r_rd_fldr_bad_file_name              { buf = qtn_fldr_bad_file_name; } 
+RESOURCE TBUF r_rd_fldr_name_already_used          { buf = qtn_fldr_name_already_used; } 
+RESOURCE TBUF r_rd_item_overwrite_query            { buf = qtn_fldr_overwrite_query; }
+
+// End of File
+
+

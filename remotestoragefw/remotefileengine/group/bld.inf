@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2003-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project Remote File Engine
+*
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_EXPORTS
+../inc/rsfwdirent.h             |../../../inc/rsfwdirent.h
+../inc/rsfwdirentattr.h         |../../../inc/rsfwdirentattr.h
+../inc/rsfwremoteaccess.h       |../../../inc/rsfwremoteaccess.h
+../inc/rsfwcontrol.h            |../../inc/rsfwcontrol.h
+../inc/rsfwcommon.h             |../../inc/rsfwcommon.h
+../inc/rsfwconnectionmanager.h  |../../inc/rsfwconnectionmanager.h
+../inc/rsfwfile.h               |../../inc/rsfwfile.h
+../inc/rsfwinterface.h          |../../inc/rsfwinterface.h
+../inc/rsfwinterface.inl        |../../inc/rsfwinterface.inl
+../inc/rsfwsession.h            |../../inc/rsfwsession.h
+// export localised loc file
+../loc/RemoteFileEngine.loc        MW_LAYER_LOC_EXPORT_PATH(RemoteFileEngine.loc)
+
+PRJ_MMPFILES
+rsfwsession.mmp
+rsfwcontrol.mmp
+rsfwcommon.mmp
+remotefe.mmp
+// End of File

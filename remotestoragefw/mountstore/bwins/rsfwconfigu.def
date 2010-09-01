@@ -1,0 +1,9 @@
+EXPORTS
+	?Get@CRsfwConfig@@QAEHIAAH@Z @ 1 NONAME ; int CRsfwConfig::Get(unsigned int, int &)
+	?Get@CRsfwConfig@@QAEHIAAVTDes16@@@Z @ 2 NONAME ; int CRsfwConfig::Get(unsigned int, class TDes16 &)
+	?IsFalse@CRsfwConfig@@QAEHI@Z @ 3 NONAME ; int CRsfwConfig::IsFalse(unsigned int)
+	?IsTrue@CRsfwConfig@@QAEHI@Z @ 4 NONAME ; int CRsfwConfig::IsTrue(unsigned int)
+	?NewL@CRsfwConfig@@SAPAV1@VTUid@@@Z @ 5 NONAME ; class CRsfwConfig * CRsfwConfig::NewL(class TUid)
+	?Set@CRsfwConfig@@QAEHIAAH@Z @ 6 NONAME ; int CRsfwConfig::Set(unsigned int, int &)
+	?Set@CRsfwConfig@@QAEHIAAVTDes16@@@Z @ 7 NONAME ; int CRsfwConfig::Set(unsigned int, class TDes16 &)
+

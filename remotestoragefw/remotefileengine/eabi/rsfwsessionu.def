@@ -1,0 +1,30 @@
+EXPORTS
+	_ZN11TDirEntAttr12InternalizeLER11RReadStream @ 1 NONAME
+	_ZN11TDirEntAttr5ClearEv @ 2 NONAME
+	_ZN12RRsfwSession10CreateFileE4TFidRK7TDesC16jjRS0_ @ 3 NONAME
+	_ZN12RRsfwSession10FlushCacheER4TFid @ 4 NONAME
+	_ZN12RRsfwSession10OpenByPathE4TFidR6TDes16P11TDirEntAttri @ 5 NONAME
+	_ZN12RRsfwSession10RemoveFileE4TFidRK7TDesC16 @ 6 NONAME
+	_ZN12RRsfwSession13GetAttributesE4TFidR6TEntry @ 7 NONAME
+	_ZN12RRsfwSession13MakeDirectoryE4TFidRK7TDesC16 @ 8 NONAME
+	_ZN12RRsfwSession15RemoveDirectoryE4TFidRK7TDesC16 @ 9 NONAME
+	_ZN12RRsfwSession20SetHighCachePriorityER4TFid @ 10 NONAME
+	_ZN12RRsfwSession5CloseEv @ 11 NONAME
+	_ZN12RRsfwSession5FetchE4TFidiiRi @ 12 NONAME
+	_ZN12RRsfwSession5FlushE4TFidiii @ 13 NONAME
+	_ZN12RRsfwSession6LookupE4TFidRK7TDesC16jRS0_ @ 14 NONAME
+	_ZN12RRsfwSession7ConnectEv @ 15 NONAME
+	_ZN12RRsfwSession7RfeInitER4TFid @ 16 NONAME
+	_ZN12RRsfwSession8MoveFidsE4TFidRK7TDesC16S0_S3_i @ 17 NONAME
+	_ZN12RRsfwSession8SetEntryE4TFidRK5TTimejj @ 18 NONAME
+	_ZN12RRsfwSession9CloseFileE4TFidj @ 19 NONAME
+	_ZN12RRsfwSession9FetchDataE4TFidiiR6TDes16Ri @ 20 NONAME
+	_ZN12RRsfwSession9OkToWriteE4TFidjRi @ 21 NONAME
+	_ZN12RRsfwSessionC1Ev @ 22 NONAME
+	_ZN12RRsfwSessionC2Ev @ 23 NONAME
+	_ZN7TDirEnt12InternalizeLER11RReadStream @ 24 NONAME
+	_ZN7TDirEnt5ClearEv @ 25 NONAME
+	_ZNK11TDirEntAttr12ExternalizeLER12RWriteStream @ 26 NONAME
+	_ZNK12RRsfwSession7VersionEv @ 27 NONAME
+	_ZNK7TDirEnt12ExternalizeLER12RWriteStream @ 28 NONAME
+

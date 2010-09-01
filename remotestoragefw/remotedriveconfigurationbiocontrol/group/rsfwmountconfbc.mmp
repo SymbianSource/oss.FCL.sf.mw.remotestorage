@@ -1,0 +1,72 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project remote drive BIO control
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET		rsfwmountconfbc.dll
+
+TARGETTYPE	dll
+
+UID		0x10005f5f 0x101F976E
+CAPABILITY CAP_GENERAL_DLL
+TARGETPATH	/system/libs
+
+// APP HEADER DIRS NEEDED FOR PLUG-IN BIO CONTROL API:
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   ../../../inc
+SYSTEMINCLUDE   ../../inc
+
+USERINCLUDE     ../inc
+  
+SOURCEPATH	../src
+
+SOURCE		rsfwmountconfbc.cpp
+SOURCEPATH              ../../MDebug/src
+SOURCE                  mdebug.cpp
+
+SOURCEPATH	../src
+START RESOURCE	../inc/rsfwmountconfbc.rss
+HEADER
+TARGETPATH  RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+START RESOURCE ../bif/rsfwmountconfbcbif.rss
+TARGETPATH BIOFILE_DIR
+LANGUAGE_IDS
+END
+
+LIBRARY		cone.lib
+LIBRARY		efsrv.lib
+LIBRARY     eikcoctl.lib // Menus API
+LIBRARY		euser.lib
+LIBRARY		rsfwmountstore.lib
+LIBRARY		rsfwmountutils.lib
+LIBRARY		rsfwmountman.lib
+LIBRARY     rsfwnotplugin.lib // dialog for renaming drives
+LIBRARY		msgeditorutils.lib          //CMsgBioControl
+LIBRARY		msgs.lib
+LIBRARY     richbio.lib
+LIBRARY     estor.lib //for RFileReadStream
+LIBRARY     commonengine.lib // StringLoader
+LIBRARY     bafl.lib 
+LIBRARY     avkon.lib
+LIBRARY    flogger.lib
+LIBRARY     charconv.lib // for CnvUtfConverter
+

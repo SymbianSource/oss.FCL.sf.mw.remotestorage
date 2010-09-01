@@ -1,0 +1,9 @@
+EXPORTS
+	_Z24ImplementationGroupProxyRi @ 1 NONAME
+	_Z13NotifierArrayv @ 2 NONAME
+	_ZTI17CRsfwNotPluginDlg @ 3 NONAME ; #<TI>#
+	_ZTI24CRsfwNotPluginNameDialog @ 4 NONAME ; #<TI>#
+	_ZTV17CRsfwNotPluginDlg @ 5 NONAME ; #<VT>#
+	_ZTV24CRsfwNotPluginNameDialog @ 6 NONAME ; #<VT>#
+	_ZN24CRsfwNotPluginNameDialog4NewLERK7TDesC16R6TDes16R3RFs @ 7 NONAME
+

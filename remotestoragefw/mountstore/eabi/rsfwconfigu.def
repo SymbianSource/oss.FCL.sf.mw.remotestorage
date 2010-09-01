@@ -1,0 +1,11 @@
+EXPORTS
+	_ZN11CRsfwConfig3GetEjR6TDes16 @ 1 NONAME
+	_ZN11CRsfwConfig3GetEjRi @ 2 NONAME
+	_ZN11CRsfwConfig3SetEjR6TDes16 @ 3 NONAME
+	_ZN11CRsfwConfig3SetEjRi @ 4 NONAME
+	_ZN11CRsfwConfig4NewLE4TUid @ 5 NONAME
+	_ZN11CRsfwConfig6IsTrueEj @ 6 NONAME
+	_ZN11CRsfwConfig7IsFalseEj @ 7 NONAME
+	_ZTI11CRsfwConfig @ 8 NONAME ; #<TI>#
+	_ZTV11CRsfwConfig @ 9 NONAME ; #<VT>#
+

@@ -1,0 +1,29 @@
+EXPORTS
+	??0RRsfwSession@@QAE@XZ @ 1 NONAME ; RRsfwSession::RRsfwSession(void)
+	?Clear@TDirEnt@@QAEXXZ @ 2 NONAME ; void TDirEnt::Clear(void)
+	?Clear@TDirEntAttr@@QAEXXZ @ 3 NONAME ; void TDirEntAttr::Clear(void)
+	?Close@RRsfwSession@@QAEXXZ @ 4 NONAME ; void RRsfwSession::Close(void)
+	?CloseFile@RRsfwSession@@QAEXVTFid@@I@Z @ 5 NONAME ; void RRsfwSession::CloseFile(class TFid, unsigned int)
+	?Connect@RRsfwSession@@QAEHXZ @ 6 NONAME ; int RRsfwSession::Connect(void)
+	?CreateFile@RRsfwSession@@QAEHVTFid@@ABVTDesC16@@IIAAV2@@Z @ 7 NONAME ; int RRsfwSession::CreateFile(class TFid, class TDesC16 const &, unsigned int, unsigned int, class TFid &)
+	?ExternalizeL@TDirEnt@@QBEXAAVRWriteStream@@@Z @ 8 NONAME ; void TDirEnt::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@TDirEntAttr@@QBEXAAVRWriteStream@@@Z @ 9 NONAME ; void TDirEntAttr::ExternalizeL(class RWriteStream &) const
+	?Fetch@RRsfwSession@@QAEHVTFid@@HHAAH@Z @ 10 NONAME ; int RRsfwSession::Fetch(class TFid, int, int, int &)
+	?FetchData@RRsfwSession@@QAEHVTFid@@HHAAVTDes16@@AAH@Z @ 11 NONAME ; int RRsfwSession::FetchData(class TFid, int, int, class TDes16 &, int &)
+	?Flush@RRsfwSession@@QAEHVTFid@@HHH@Z @ 12 NONAME ; int RRsfwSession::Flush(class TFid, int, int, int)
+	?FlushCache@RRsfwSession@@QAEHAAVTFid@@@Z @ 13 NONAME ; int RRsfwSession::FlushCache(class TFid &)
+	?GetAttributes@RRsfwSession@@QAEHVTFid@@AAVTEntry@@@Z @ 14 NONAME ; int RRsfwSession::GetAttributes(class TFid, class TEntry &)
+	?InternalizeL@TDirEnt@@QAEXAAVRReadStream@@@Z @ 15 NONAME ; void TDirEnt::InternalizeL(class RReadStream &)
+	?InternalizeL@TDirEntAttr@@QAEXAAVRReadStream@@@Z @ 16 NONAME ; void TDirEntAttr::InternalizeL(class RReadStream &)
+	?Lookup@RRsfwSession@@QAEHVTFid@@ABVTDesC16@@IAAV2@@Z @ 17 NONAME ; int RRsfwSession::Lookup(class TFid, class TDesC16 const &, unsigned int, class TFid &)
+	?MakeDirectory@RRsfwSession@@QAEHVTFid@@ABVTDesC16@@@Z @ 18 NONAME ; int RRsfwSession::MakeDirectory(class TFid, class TDesC16 const &)
+	?MoveFids@RRsfwSession@@QAEHVTFid@@ABVTDesC16@@01H@Z @ 19 NONAME ; int RRsfwSession::MoveFids(class TFid, class TDesC16 const &, class TFid, class TDesC16 const &, int)
+	?OkToWrite@RRsfwSession@@QAEHVTFid@@IAAH@Z @ 20 NONAME ; int RRsfwSession::OkToWrite(class TFid, unsigned int, int &)
+	?OpenByPath@RRsfwSession@@QAEHVTFid@@AAVTDes16@@PAVTDirEntAttr@@H@Z @ 21 NONAME ; int RRsfwSession::OpenByPath(class TFid, class TDes16 &, class TDirEntAttr *, int)
+	?RemoveDirectory@RRsfwSession@@QAEHVTFid@@ABVTDesC16@@@Z @ 22 NONAME ; int RRsfwSession::RemoveDirectory(class TFid, class TDesC16 const &)
+	?RemoveFile@RRsfwSession@@QAEHVTFid@@ABVTDesC16@@@Z @ 23 NONAME ; int RRsfwSession::RemoveFile(class TFid, class TDesC16 const &)
+	?RfeInit@RRsfwSession@@QAEHAAVTFid@@@Z @ 24 NONAME ; int RRsfwSession::RfeInit(class TFid &)
+	?SetEntry@RRsfwSession@@QAEHVTFid@@ABVTTime@@II@Z @ 25 NONAME ; int RRsfwSession::SetEntry(class TFid, class TTime const &, unsigned int, unsigned int)
+	?SetHighCachePriority@RRsfwSession@@QAEHAAVTFid@@@Z @ 26 NONAME ; int RRsfwSession::SetHighCachePriority(class TFid &)
+	?Version@RRsfwSession@@QBE?AVTVersion@@XZ @ 27 NONAME ; class TVersion RRsfwSession::Version(void) const
+

@@ -1,0 +1,5 @@
+EXPORTS
+	?ImplementationGroupProxy@@YAPBUTImplementationProxy@@AAH@Z @ 1 NONAME ; struct TImplementationProxy const * ImplementationGroupProxy(int &)
+	?NotifierArray@@YAPAV?$CArrayPtr@VMEikSrvNotifierBase2@@@@XZ @ 2 NONAME ; class CArrayPtr<class MEikSrvNotifierBase2> * NotifierArray(void)
+	?NewL@CRsfwNotPluginNameDialog@@SAPAV1@ABVTDesC16@@AAVTDes16@@AAVRFs@@@Z @ 3 NONAME ; class CRsfwNotPluginNameDialog * CRsfwNotPluginNameDialog::NewL(class TDesC16 const &, class TDes16 &, class RFs &)
+

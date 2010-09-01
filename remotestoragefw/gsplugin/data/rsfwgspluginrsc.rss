@@ -1,0 +1,580 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource file for RSFW GS plugin
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    RSFW // 4 letter ID
+
+//  INCLUDES
+#include    <eikon.rh>
+#include    <avkon.rsg>
+#include    <avkon.rh>
+#include    <avkon.mbg>
+#include    <eikon.rsg>
+#include    <appinfo.rh>
+#include    <avkon.loc>
+#include    <AvkonIcons.hrh>
+#include    <data_caging_paths_strings.hrh>
+#include    "rsfwgsplugin.hrh"
+#include    <rsfwgsplugin.loc>
+#include    <remotefileengine.loc>
+#include    <cmmanager.loc>
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE
+    {
+    }
+
+//------------------------------------------------------------------------------
+//   
+//    EIK_APP_INFO
+//    It contains application information.
+//
+//------------------------------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+    }
+
+
+// **COMMON RESOURCES
+
+//------------------------------------------------------------------------------
+//   
+//    r_gs_menubar_open_exit
+//    Options menu with 'Open' and 'Exit' items.
+//
+//------------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_gs_menubar_open_exit
+    {
+    titles =
+        {
+        MENU_TITLE 
+            { 
+            menu_pane = r_gs_menu_item_exit;
+            },
+        MENU_TITLE 
+            {
+            menu_pane = r_gs_menu_item_open;
+            }
+        };
+    }
+
+//------------------------------------------------------------------------------
+//   
+//    r_gs_menubar_change_exit
+//    Options menu with 'Change' and 'Exit' items.
+//
+//------------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_gs_menubar_change_exit
+    {
+    titles =
+        {
+        MENU_TITLE 
+            { 
+            menu_pane = r_gs_menu_item_exit;
+            },
+        MENU_TITLE 
+            {
+            menu_pane = r_gs_menu_item_change;
+            }
+        };
+    }
+
+//------------------------------------------------------------------------------
+//   
+//    r_gs_menu_item_open
+//    Options menu item 'Open'.
+//
+//------------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_gs_menu_item_open
+    {
+    items =
+        {
+        MENU_ITEM 
+            {
+            command = EGSCmdAppOpen;
+            txt = qtn_set_options_open;
+            }
+        };
+    }
+
+//------------------------------------------------------------------------------
+//   
+//    r_gs_menu_item_change
+//    Options menu item 'Change'.
+//
+//------------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_gs_menu_item_change
+    {
+    items =
+        {
+        MENU_ITEM 
+            {
+            command = EGSCmdAppChange;
+            txt = qtn_set_options_change;
+            }
+        };
+    }
+
+//------------------------------------------------------------------------------
+//   
+//    r_gs_menu_item_exit
+//    Options menu items 'Help' and 'Exit'.
+//    Used instead of plain 'Exit' when help is wanted
+//    to be shown in UI.
+//
+//------------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_gs_menu_item_exit
+    {
+    items =
+        {
+        MENU_ITEM
+            {
+            command = EAknCmdHelp;
+            txt = qtn_options_help;
+            },
+        MENU_ITEM 
+            {
+            command = EAknCmdExit;
+            txt = qtn_options_exit;
+            }
+        };
+    }
+
+
+// RSFW SETTINGS
+    
+//----------------------------------------------------
+//  r_gs_remote_drives_view_caption 
+// 
+// remote drives view caption
+//----------------------------------------------------
+//
+RESOURCE TBUF r_gs_remote_drives_view_caption
+    {
+    buf = qtn_set_folder_conn_remote_drives;
+    }
+    
+
+//------------------------------------------------------------------------------
+//   
+//  r_gs_menubar_remote_drives_view   
+//  Menubar for Remote drive list view.
+//------------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_gs_menubar_remote_drives_view
+    {
+    titles =
+        {
+        MENU_TITLE 
+            { 
+            menu_pane = r_gs_menu_item_exit;
+            },
+        MENU_TITLE 
+            {
+            menu_pane = r_gs_remote_drives_menu;
+            }
+        };
+    }
+
+//------------------------------------------------------------------------------
+//   
+//  r_gs_remote_drives_menu
+//  Menu items in Profiles menu.
+//------------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_gs_remote_drives_menu
+    {
+    items=
+        {
+       MENU_ITEM 
+            {
+            command = EGSCmdAppChange;
+            txt = qtn_options_change; 
+            flags = EEikMenuItemAction;
+            },
+        MENU_ITEM 
+            {
+            command = EGSCmdAppEdit;
+            txt = qtn_rd_opt_edit;
+            flags = EEikMenuItemSpecific;
+            },
+        MENU_ITEM
+            {
+            command = EGSCmdAppNew;
+            txt = qtn_rd_opt_new_drive;
+            },
+        MENU_ITEM
+            {
+            command = EGSCmdAppConnect;
+            txt = qtn_rd_opt_connect;
+            flags = EEikMenuItemSpecific;
+            },
+        MENU_ITEM
+            {
+            command = EGSCmdAppDisconnect;
+            txt = qtn_rd_opt_disconnect;
+            flags = EEikMenuItemSpecific;
+            },
+        MENU_ITEM
+            {
+            command = EGSCmdAppSendLink;
+            txt = qtn_rd_opt_send_link;
+            flags = EEikMenuItemSpecific;
+            },            
+        MENU_ITEM
+            {
+            command = EGSCmdAppDelete;
+            txt = qtn_rd_opt_delete;
+            flags = EEikMenuItemSpecific;
+            }       
+        };
+    }
+
+//------------------------------------------------------------------------------
+//   
+//    r_gs_rsfw_main_view
+//    RSFW plugin main view.
+//
+//------------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_gs_rsfw_main_view
+    {
+    menubar = r_gs_menubar_remote_drives_view;  
+    cba = r_rsfw_softkeys_options_back_edit;    
+    }
+      
+
+//------------------------------------------------------------------------------
+//   
+//    r_gs_rsfw_no_remote_drives
+//    Remote Drives view's listbox empty text.
+//
+//------------------------------------------------------------------------------
+//
+RESOURCE TBUF r_gs_rsfw_no_remote_drives
+    {
+    buf = qtn_rd_empty_list_primary;        
+    }
+    
+ 
+//------------------------------------------------------------------------------
+//   
+//    r_gs_rsfw_no_remote_drives
+//    Remote Drives view's listbox empty text.
+//
+//------------------------------------------------------------------------------
+//
+RESOURCE TBUF r_gs_rsfw_no_remote_drives_explanatory
+    {
+    buf = qtn_rd_empty_list_secondary;        
+    }
+     
+ 
+//------------------------------------------------------------------------------
+//   
+//    r_gs_rsfw_remote_drive_settings_view
+//    Remote drive settings view.
+//
+//------------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_gs_rsfw_remote_drive_settings_view
+    {
+    menubar = r_gs_menubar_change_exit;  
+    cba = r_rsfw_softkeys_options_back_change;    
+    }
+
+
+RESOURCE CBA r_rsfw_softkeys_options_back_edit
+    {
+    buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EGSCmdAppEdit; txt = qtn_msk_edit; }
+        };
+    }
+    
+RESOURCE CBA r_rsfw_softkeys_options_back_change
+    {
+    buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EGSCmdAppChange; txt = qtn_msk_change; }
+        };
+    } 
+    
+RESOURCE CBA r_rsfw_softkeys_options_back_empty
+		{    
+  	buttons =
+  			{
+  			CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; }
+  			};
+  	}
+    
+//------------------------------------------------------------------------------
+//   
+//    r_gs_rsfw_remote_drive_settings_view_title
+//    Remote drives setting view's default title.
+//
+//------------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_gs_rsfw_remote_drive_settings_view_title
+    {
+    txt = qtn_rd_title_drives;        
+    }
+    
+// ---------------------------------------------------------
+//   
+// r_settings
+//
+// settings list - collection of all setting types
+//   
+// ---------------------------------------------------------
+RESOURCE AVKON_SETTING_ITEM_LIST r_settings
+    {
+    flags = EAknSettingItemIncludeHiddenInOrdinal;
+    title = qtn_rd_title_new_drive;
+    items = 
+        {
+        AVKON_SETTING_ITEM
+            {
+            identifier = ESettingItemDriveName;
+            setting_page_resource = r_server_name_editor_page;
+            name = qtn_rd_setting_drive_name;
+            empty_item_text = qtn_rd_default_drive_name;
+            compulsory_ind_string = "*";
+            },
+       AVKON_SETTING_ITEM
+            {
+            identifier = ESettingItemURL;
+            setting_page_resource = r_url_editor_page;
+            name = qtn_rd_setting_url;
+            compulsory_ind_string = "*";
+            },
+        AVKON_SETTING_ITEM
+            {
+            identifier = ESettingItemAccessPoint;
+            setting_page_resource = r_accesspoint_editor_page;
+            name = qtn_rd_setting_ap;
+            empty_item_text = qtn_netw_conset_sett_always_ask;
+            },            
+        AVKON_SETTING_ITEM
+            {
+            identifier = ESettingItemUserID;
+            setting_page_resource = r_user_id_editor_page;
+            name = qtn_rd_setting_user;
+            },
+        AVKON_SETTING_ITEM
+            {
+            identifier = ESettingItemPassword;
+            setting_page_resource = r_password_editor_page;
+            name = qtn_rd_setting_pw;
+            }
+        };
+    }
+    
+// ---------------------------------------------------------
+//   
+// Settings Pages
+//
+// defines the AVKON_SETTING_PAGE structures referred to in 
+// setting_page_resource fields above.
+// 
+// These structures define the way in which the editors used
+// to change the setting data are presented.
+// 
+// ---------------------------------------------------------
+//   
+RESOURCE AVKON_SETTING_PAGE r_server_name_editor_page
+    {
+    label= qtn_rd_setting_drive_name;
+    type = EEikCtEdwin;
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    editor_resource_id = r_server_name_editor;
+    }
+  
+RESOURCE AVKON_SETTING_PAGE r_url_editor_page
+    {
+    label= qtn_rd_setting_url;
+    type = EEikCtEdwin;
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    editor_resource_id = r_url_editor;
+    }  
+
+RESOURCE AVKON_SETTING_PAGE r_accesspoint_editor_page
+    {
+    label= qtn_rd_setting_ap;
+    type = EEikCtEdwin;
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    editor_resource_id = r_accesspoint_editor;
+    }
+      
+RESOURCE AVKON_SETTING_PAGE r_user_id_editor_page
+    {
+    label= qtn_rd_setting_user;
+    type = EEikCtEdwin;
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    editor_resource_id = r_user_id_editor;
+    }
+  
+RESOURCE AVKON_SETTING_PAGE r_password_editor_page
+    {
+    label= qtn_rd_setting_pw;
+    type = EEikCtSecretEd;
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    editor_resource_id = r_password_editor;
+    }    
+    
+RESOURCE EDWIN r_user_id_editor
+    {
+    flags = EEikEdwinAutoSelection | EAknEditorLowerCase | EEikEdwinNoLineOrParaBreaks;
+    allowed_case_modes = EAknEditorLowerCase | EAknEditorUpperCase;
+    numeric_keymap=EAknEditorCalculatorNumberModeKeymap;
+    allowed_input_modes = EAknEditorTextInputMode | EAknEditorNumericInputMode;
+    default_input_mode = EAknEditorTextInputMode;
+    special_character_table = R_AVKON_URL_SPECIAL_CHARACTER_TABLE_DIALOG;
+    default_case = EAknEditorLowerCase;
+    avkon_flags = EAknEditorFlagLatinInputModesOnly;
+    width = 0;
+    lines = 0;
+    maxlength = KMaxUserIDLength;
+    }
+  
+RESOURCE SECRETED r_password_editor
+    {
+    num_letters = KMaxPasswordLength;
+    }
+
+RESOURCE EDWIN r_server_address_editor
+    {
+    maxlength = KMaxServerAddressLength;
+    }
+  
+RESOURCE EDWIN r_accesspoint_editor
+    {
+    maxlength = KMaxAccessPointNameLength;
+    }
+  
+RESOURCE EDWIN r_server_name_editor
+    {
+    width = 0;
+    lines = 0;
+    flags = EEikEdwinNoLineOrParaBreaks;
+    maxlength = KMaxFriendlyNameLength;
+    }
+  
+RESOURCE EDWIN r_url_editor
+    {
+    maxlength = KMaxURLLength;
+    numeric_keymap = EAknEditorCalculatorNumberModeKeymap;
+    allowed_input_modes = EAknEditorTextInputMode | EAknEditorNumericInputMode;
+    default_input_mode = EAknEditorTextInputMode;
+    special_character_table = R_AVKON_URL_SPECIAL_CHARACTER_TABLE_DIALOG;
+    allowed_case_modes = EAknEditorLowerCase | EAknEditorUpperCase;
+    default_case = EAknEditorLowerCase;
+    flags = EEikEdwinAutoSelection | EAknEditorLowerCase | EEikEdwinNoLineOrParaBreaks;
+    avkon_flags = EAknEditorFlagLatinInputModesOnly;
+    width = 0;
+    lines = 0;
+    }    
+    
+RESOURCE DIALOG r_confirmation_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_YES_NO;
+    items=
+        {
+        DLG_LINE 
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+                {
+                layout =EConfirmationQueryLayout;
+                };
+            }
+        };
+    }  
+RESOURCE DIALOG r_rsfw_information_note
+    {
+    flags =  EAknInformationNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralNote;
+            control = AVKON_NOTE
+                {
+                // localised string for default text, see Notes UI spec.
+                layout = EGeneralLayout;
+                animation = R_QGN_NOTE_INFO_ANIM;
+                };
+            }
+        };
+    }
+    
+    
+RESOURCE DIALOG r_drive_unavailable_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items=
+        {
+        DLG_LINE 
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+                {
+                layout =EConfirmationQueryLayout;
+                };
+            }
+        };
+    }      
+    
+//----------------------------------------------------
+//   
+//    string resouces
+//    the strings can be localized in loc file
+//
+//----------------------------------------------------
+//    
+RESOURCE TBUF r_str_remote_drive_new_name { buf = qtn_rd_title_new_drive; }
+RESOURCE TBUF r_str_rsfw_conf_delete { buf = qtn_rd_query_delete_drive; }
+RESOURCE TBUF r_str_remote_drive_conf_compulsory { buf = qtn_rd_query_incomplete; }
+RESOURCE TBUF r_str_remote_drives_view_title { buf = qtn_rd_title_drives; }
+RESOURCE TBUF r_str_remote_drive_name_already_exist { buf = qtn_rd_error_existing_name; }
+RESOURCE TBUF r_str_rsfw_error_max_drives { buf = qtn_rd_error_max_drives; }
+RESOURCE TBUF r_str_rsfw_error_edit_connected { buf = qtn_rd_error_edit_connected; }
+RESOURCE TBUF r_str_rsfw_error_illegal_characters { buf = qtn_fldr_illegal_characters; }
+RESOURCE TBUF r_str_rsfw_error_illegal_address { buf = qtn_rd_infonote_missing_http_prefix; }
+RESOURCE TBUF r_str_rsfw_send_credentials_query { buf = qtn_rd_conf_query_send_auth_info; }
+    
+//End of File

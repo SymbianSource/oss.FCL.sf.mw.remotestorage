@@ -1,0 +1,50 @@
+/*
+* Copyright (c) 2005-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project MountMan API
+*
+*/
+
+#include <platform_paths.hrh>
+TARGET		rsfwmountman.dll
+
+TARGETTYPE	dll
+
+UID		0x1000008d 0x101F976F
+
+CAPABILITY	CAP_GENERAL_DLL
+
+SOURCEPATH	../src
+
+SOURCE		rsfwmountman.cpp
+SOURCE		rsfwmountmanimpl.cpp
+SOURCE		rsfwmountentry.cpp
+
+LANG		SC
+
+MW_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   ../../../inc
+SYSTEMINCLUDE   ../../inc
+USERINCLUDE     ../inc
+
+LIBRARY		efsrv.lib
+LIBRARY		euser.lib
+LIBRARY     bafl.lib
+LIBRARY     estor.lib 
+LIBRARY		rsfwmountstore.lib
+LIBRARY     rsfwmountutils.lib
+LIBRARY		rsfwcontrol.lib
+
+DEFFILE		rsfwmountman.def
+
+// End of File

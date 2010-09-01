@@ -1,0 +1,68 @@
+/*
+* Copyright (c) 2003-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project WebDAV Access plug-in
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET          rsfwdavaccess.dll
+TARGETTYPE      PLUGIN
+
+
+UID             0x10009D8D 0x101F9769
+CAPABILITY      ALL -TCB
+
+// Classes in webdavsession.cpp call many times
+// classes in propfindparser.cpp and lockqueryparser.cpp,
+// so in ideal case these should be linked next to each other
+// in the binary - don't know if the order here helps anything though....
+SOURCEPATH      ../src
+SOURCE          rsfwdavproxy.cpp
+SOURCE          rsfwdavaccess.cpp
+SOURCE          rsfwdavaccesscontext.cpp
+SOURCE          rsfwdavfileinfo.cpp
+SOURCE          rsfwdavtransaction.cpp
+SOURCE          rsfwdavsession.cpp
+SOURCE          rsfwpropfindparser.cpp
+SOURCE          rsfwlockqueryparser.cpp
+SOURCEPATH      ../../MDebug/src
+SOURCE          mdebug.cpp
+
+MW_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   ../../../inc
+SYSTEMINCLUDE   ../../inc
+SYSTEMINCLUDE   /epoc32/include/libc
+SYSTEMINCLUDE   /epoc32/include/ecom
+SYSTEMINCLUDE   /epoc32/include/networking // dns error codes
+USERINCLUDE     ../inc
+
+SOURCEPATH      ../data
+START RESOURCE  101f9769.rss 
+HEADER
+TARGET          rsfwdavaccess.rsc
+TARGETPATH      resource/plugins 
+END
+
+// RESOURCE  davaccess.rss
+
+LIBRARY         bafl.lib
+LIBRARY         ecom.lib
+LIBRARY         efsrv.lib
+LIBRARY         euser.lib
+LIBRARY         http.lib
+LIBRARY         inetprotutil.lib
+LIBRARY         rsfwcommon.lib
+LIBRARY         xmlframework.lib
+LIBRARY         flogger.lib
